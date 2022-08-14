@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export default function Home() {
   const GITHUB_LINK = "https://github.com/HiberNuts";
-  const NFT_CONTRACT_ADDRESS = "0x88eE8A44219b7958881b978597dEb2371Ae06491";
+  const NFT_CONTRACT_ADDRESS = "0xb42BeD20683D67d43844aD9f0B33C3a80CbeFC49";
 
   const [walletConnected, setWalletConnected] = useState(false);
 
@@ -102,9 +102,9 @@ export default function Home() {
     const web3Provider = new providers.Web3Provider(provider);
 
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 5) {
+      window.alert("Change the network to Goerli");
+      throw new Error("Change network to Goerli");
     }
 
     if (needSigner) {
@@ -117,7 +117,6 @@ export default function Home() {
   useEffect(() => {
     if (!walletConnected) {
       web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
         providerOptions: {},
         disableInjectedProvider: false,
       });

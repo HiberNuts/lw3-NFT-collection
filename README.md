@@ -1,8 +1,5 @@
 # Simple NFT minting webapp
 
 contract address:
-0x88eE8A44219b7958881b978597dEb2371Ae06491
+0xb42BeD20683D67d43844aD9f0B33C3a80CbeFC49
 
-```
-
-```

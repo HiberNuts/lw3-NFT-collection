@@ -16,7 +16,7 @@ async function main() {
 
   // print the address of the deployed contract
   console.log("Crypto Devs Contract Address:", deployedCryptoDevsContract.address);
-  let txn = await deployedCryptoDevsContract.mint({ value: hre.ethers.utils.parseEther("0.6") });
+  let txn = await deployedCryptoDevsContract.mint({ value: hre.ethers.utils.parseEther("0.05") });
   await txn.wait();
 
   console.log("Minted NFT #1 ", txn);
