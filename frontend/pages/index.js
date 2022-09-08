@@ -114,6 +114,7 @@ export default function Home() {
     return web3Provider;
   };
 
+
   useEffect(() => {
     if (!walletConnected) {
       web3ModalRef.current = new Web3Modal({
@@ -147,9 +148,9 @@ export default function Home() {
         <button className={styles.button} onClick={publicMint}>
           Public Mint 🚀
         </button>
-        {/* <button className={styles.button} onClick={withdraw}>
+        <button className={styles.button} onClick={withdraw}>
           withdraw 🚀
-        </button> */}
+        </button>
       </div>
     );
 
